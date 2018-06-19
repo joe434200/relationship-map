@@ -1,0 +1,100 @@
+///////////////
+/////Node/////
+/////////////
+.node-button
+    display: flex
+    width: 10rem
+    position: relative
+    height: 4rem
+    padding: .75rem .5rem
+    background: #ffffff
+    border: $card-border 1px solid
+    border-radius: 4px
+
+    .slds-icon_container
+        height: 18px
+        width: 18px
+        vertical-align: middle
+    svg
+        vertical-align: top
+
+    .node-name
+        font-size: 14px
+
+    .node-role
+        font-size: 12px
+        color: $line-color
+        display: block
+
+.slds-button_neutral
+    text-align: left
+
+//Node Focus Classes
+.node.active .node-button
+    border: rgba(0,112,210,1) 1px solid
+    box-shadow: 0px 0px 5px 0px rgba(0,112,210,1)
+
+///////////////////////
+/////Edit Buttons/////
+/////////////////////
+%round-button
+    border-radius: 50%
+    top: -12px
+    width: 1.5rem
+    height: 1.5rem
+    z-index: 5
+    padding: 0
+
+    svg
+        position: absolute
+        width: .7rem
+        height: .7rem
+        left: -6px
+        top: -13px
+        fill: $brand-blue
+
+    span
+        position: relative
+
+.slds-button.circle-button-edit
+    @extend %round-button
+    border: 1px solid $brand-blue
+    left: 105px
+
+.slds-button.circle-button-add
+    @extend %round-button
+    border: 1px solid $brand-blue
+    left: 135px
+
+.slds-button.circle-button-extender
+    @extend %round-button
+    top: 50%
+    transform: translateY(-50%)
+    right: -10px
+    line-height: 1
+
+///////////////////
+/////Pop Over/////
+/////////////////
+.map-popOver
+    left: 115%
+    top: 10%
+
+    .slds-popover
+        width: 14rem
+
+    .slds-popover__body
+        padding: 32px 16px 26px 16px
+
+.map-popOver-row
+    display: flex
+    justify-content: space-between
+
+    &:not(:first-child)
+        margin-top: 20px
+
+    .number
+        font-weight: bold
+
+.map-popOver-media
+    display: flex

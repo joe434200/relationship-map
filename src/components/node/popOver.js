@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Icon from './Icon';
+import Icon from '../global/Icon';
 
 class popOver extends Component {
   constructor(props) {

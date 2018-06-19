@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Icon from './Icon';
+import Icon from '../global/Icon';
 class cardData extends Component {
   render() {
     const { data, type } = this.props;

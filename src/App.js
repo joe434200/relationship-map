@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Tree from './components/tree';
-import Card from './components/Card';
-import Header from './components/Header';
+import Tree from './components/tree/tree';
+import Card from './components/card/Card';
+import Header from './components/global/Header';
 import data from './model';
 
 class App extends Component {

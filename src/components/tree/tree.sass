@@ -1,0 +1,113 @@
+///////////////
+/////Tree/////
+/////////////
+.tree
+    position: relative
+    overflow-y: scroll
+    overflow-x: visible
+    width: 100%
+
+/////////////////
+/////Levels/////
+///////////////
+%standard-card
+    border: 1px solid #D8DDE6
+    background: #F4F6F9
+    padding: 1rem 1rem 0 1rem
+    border-radius: 4px
+    width: 195px
+
+.parent-level
+    @extend %standard-card
+    position: relative
+
+.child-level
+    position: absolute
+    left: 15rem
+    &:before
+
+.child-level:not(:first-child)
+    top: 0
+    &:before
+        position: absolute
+        content: ""
+        width: 2.4rem
+        border-top: 2px solid $line-color
+        left: -4.5rem
+        top: 2rem
+
+.child-level .child-container
+    @extend %standard-card
+    position: relative
+    margin-bottom: 20px
+
+    &:before
+        position: absolute
+        content: ""
+        width: 2.2rem
+        border-top: 2px solid $line-color
+        left: -2.2rem
+        top: 1.91rem
+
+    .container-header
+        display: flex
+        text-transform: capitalize
+        position: relative
+        padding-bottom: 12px
+
+        h4
+            font-size: 16px
+            margin-left: 8px
+        &.collapse-header
+            &:after
+                content: none
+
+//Allow header to extend to lower node
+.child-level .child-container .container-header:after
+    position: absolute
+    content: ""
+    height: 144%
+    border-left: 2px solid $line-color
+    left: -3.2rem
+    top: 1rem
+
+/////////////////
+/////Branch/////
+///////////////
+.branch
+    position: relative
+    padding-bottom: 12px
+    transition: height 3s ease-out
+
+    &:before
+        position: absolute
+        content: ""
+        width: 3.2rem
+        border-top: 2px solid $line-color
+        left: -3.2rem
+        top: 1.9rem
+
+    &:after
+        position: absolute
+        content: ""
+        height: 100%
+        border-left: 2px solid $line-color
+        left: -3.2rem
+        top: 2rem
+
+.last-node:after
+    content: none
+
+//Allow the last child on the first container with multi-nodes
+//to reach the second container
+.child-level .child-container:first-of-type .branch:last-child
+    &:after
+        height: 160%
+
+.lastChild, .first-branch
+    &:after
+        content: none
+
+.first-branch
+    &:before
+        content: none

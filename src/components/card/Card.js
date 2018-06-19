@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Icon from './Icon';
+import Icon from '../global/Icon';
 import CardData from './cardData';
 
 class Card extends Component {

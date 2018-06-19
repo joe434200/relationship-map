@@ -2,7 +2,7 @@
 //object specific branches
 import React, { Component } from 'react';
 import TreeBranch from './treeBranch';
-import Icon from './Icon';
+import Icon from '../global/Icon';
 
 class treeContainer extends Component {
 

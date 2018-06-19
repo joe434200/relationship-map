@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CrudButtons from './crudButtons';
 import PopOver from './popOver';
-import Icon from './Icon';
+import Icon from '../global/Icon';
 
 class treeNode extends Component {
   constructor(props) {

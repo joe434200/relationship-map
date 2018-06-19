@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TreeLevel from './treeLevel';
-import TreeNode from './treeNode';
+import TreeNode from '../node/treeNode';
 
 class treeBranch extends Component {
   constructor(props) {
